@@ -4,6 +4,7 @@ on:
     - main
     paths:
     - index.html
+  workflow_dispatch:
 
 name: Upload to GCS
 
