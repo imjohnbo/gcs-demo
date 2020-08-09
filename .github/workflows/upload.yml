@@ -4,7 +4,6 @@ on:
     - main
     paths:
     - index.html
-  pull_request:
 
 name: Upload to GCS
 
@@ -22,6 +21,7 @@ jobs:
         version: latest
         project_id: ${{ secrets.GCP_PROJECT_ID }}
         service_account_key: ${{ secrets.GCP_SA_KEY }}
+        export_default_credentials: true
 
     - uses: GoogleCloudPlatform/github-actions/upload-cloud-storage@0.1.3
       with:
