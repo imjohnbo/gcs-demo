@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="octocat">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>octocat</title>
+    <style>
+        html {
+            height: 100%;
+        }
+        body {
+            display: grid;
+            grid-template-rows: 1fr auto;
+            background-color: #000;
+            margin: 0px;
+        }
+        pre.container {
+            font-family: monospace;
+            color: #fff;
+            background-color: #000;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 25%;
+        }
+        footer.footer {
+            grid-row-start: 2;
+            grid-row-end: 3;
+            background-color: #fff;
+            color: #000;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <pre id="content" class="container">
+        MMM.           .MMM
+        MMMMMMMMMMMMMMMMMMM
+        MMMMMMMMMMMMMMMMMMM      ____________________________
+       MMMMMMMMMMMMMMMMMMMMM    |                            |
+      MMMMMMMMMMMMMMMMMMMMMMM   | Keep it logically awesome. |
+     MMMMMMMMMMMMMMMMMMMMMMMM   |_   ________________________|
+     MMMM::- -:::::::- -::MMMM    |/
+      MM~:~ 00~:::::~ 00~:~MM
+ .. MMMMM::.00:::+:::.00::MMMMM ..
+       .MM::::: ._. :::::MM.
+          MMMM;:::::;MMMM
+   -MM        MMMMMMM
+   ^  M+     MMMMMMMMM
+       MMMMMMM MM MM MM
+            MM MM MM MM
+            MM MM MM MM
+         .~~MM~MM~MM~MM~~.
+      ~~~~MM:~MM~~~MM~:MM~~~~
+     ~~~~~~==~==~~~==~==~~~~~~
+      ~~~~~~==~==~==~==~~~~~~
+          :~==~==~==~==~~
+    </pre>
+    <script>
+        // GET /zen
+        (function () {
+            document.addEventListener("DOMContentLoaded", function (event) {
+                req = new XMLHttpRequest();
+
+                req.onreadystatechange = function process() {
+                    if (req.readyState === XMLHttpRequest.DONE && req.status === 200) {
+                        document.getElementById("content").innerText = req.responseText;
+                    }
+                };
+
+                req.open("GET", "https://api.github.com/octocat", true);
+                req.send();
+            });
+        })();
+    </script>
+
+</body>
+
+</html>
