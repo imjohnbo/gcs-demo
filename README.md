@@ -2,6 +2,8 @@
 
 Demo using Google Cloud Storage to host a static site! :octocat:
 
+Presented at [Greer Programmers Group](https://www.meetup.com/Greer-Programmers-Group/events/lhkdwrybclbnb/) at Aug 10, 2020 in conjunction with [these slides](https://docs.google.com/presentation/d/e/2PACX-1vSQ-M68oMLMabk6m22uTaCr72W066tJ9pC5MOdTMV-UCWCbVQrOJGyRDWviyLZBR7q1cYvgcxXT8upr/pub?start=false&loop=false&delayms=3000&slide=id.p).
+
 ## Setup
 
 For more, see the [Hosting a static website](https://cloud.google.com/storage/docs/hosting-static-website) tutorial.
