@@ -22,7 +22,7 @@ For more, see the [Hosting a static website](https://cloud.google.com/storage/do
 * `gcloud iam service-accounts list` to retrieve the email of the service account just created.
 * `gcloud iam service-accounts keys create key.json --iam-account=SA_EMAIL`
 * `gcloud auth activate-service-account SA_EMAIL --key-file=key.json`
-* `gcloud projects add-iam-policy-binding PROJECT_ID --member=serviceAccount:SA_EMAIL --role=roles/storage.objectAdmin`
+* `gcloud projects add-iam-policy-binding PROJECT_ID --member=serviceAccount:SA_EMAIL --role=roles/storage.admin`
 * `gsutil mb -b on gs://BUCKET_NAME`
 
 ## Usage
