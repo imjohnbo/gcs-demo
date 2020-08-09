@@ -28,7 +28,7 @@ For more, see the [Hosting a static website](https://cloud.google.com/storage/do
 ## Usage
 * `gsutil cp ./index.html gs://BUCKET_NAME`
 * `gsutil iam ch allUsers:objectViewer gs://BUCKET_NAME`
-* Your file is available at https://storage.googleapis.com/BUCKET_NAME/index.html 🚀
+* Your file is available at https://storage.googleapis.com/BUCKET_NAME/index.html 🚀. This one is available [here](https://storage.googleapis.com/imjohnbo-gcp-demo/index.html).
 
 ## Automatic deploys using GitHub Actions (optional)
 
