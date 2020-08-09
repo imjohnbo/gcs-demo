@@ -1,0 +1,29 @@
+on:
+  push:
+    branches:
+    - main
+    paths:
+    - index.html
+  pull_request:
+
+name: Upload to GCS
+
+env:
+  BUCKET_NAME: imjohnbo-gcp-demo
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+
+    - uses: GoogleCloudPlatform/github-actions/setup-gcloud@0.1.3
+      with:
+        version: latest
+        project_id: ${{ secrets.GCP_PROJECT_ID }}
+        service_account_key: ${{ secrets.GCP_SA_KEY }}
+
+    - uses: GoogleCloudPlatform/github-actions/upload-cloud-storage@0.1.3
+      with:
+        path: index.html
+        destination: ${{ env.BUCKET_NAME }}

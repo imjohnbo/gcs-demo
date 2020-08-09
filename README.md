@@ -30,4 +30,6 @@ For more, see the [Hosting a static website](https://cloud.google.com/storage/do
 
 ## Automatic deploys using GitHub Actions (optional)
 
-TBD
+* `cat key.json | base64` and set it as a `GCP_SA_KEY` [secret](https://docs.github.com/en/actions/configuring-and-managing-workflows/creating-and-storing-encrypted-secrets).
+* Set `PROJECT_ID` to a secret called `GCP_PROJECT_ID`.
+* Upon every push to `index.html` on the `main` branch, the `upload.yml` GitHub Actions workflow will upload `index.html` to `gs://BUCKET_NAME`.
